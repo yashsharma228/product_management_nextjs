@@ -2,9 +2,11 @@
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
 import { useSession, signOut } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const { data: session } = useSession();
+  const router = useRouter();
 
   if (!session) return null;
 
@@ -18,7 +20,7 @@ export default function Navbar() {
           <Button color="inherit" component={Link} href="/">Dashboard</Button>
           <Button color="inherit" component={Link} href="/users">Users</Button>
           <Button color="inherit" component={Link} href="/products">Products</Button>
-          <Button color="inherit" onClick={() => signOut()}>Logout</Button>
+          <Button color="inherit" onClick={() => { signOut({ callbackUrl: '/login', redirect: false }); router.push('/login'); }}>Logout</Button>
         </Box>
       </Toolbar>
     </AppBar>

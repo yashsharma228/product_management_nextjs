@@ -70,8 +70,20 @@ export default function LoginPage() {
             >
               Sign In
             </Button>
+            <Button
+              fullWidth
+              variant="outlined"
+              size="small"
+              onClick={() => {
+                setUsername('emilys');
+                setPassword('emilyspass');
+              }}
+              sx={{ mb: 2 }}
+            >
+              Fill Test Credentials
+            </Button>
             <Typography variant="body2" color="text.secondary" align="center">
-                Use: kminchelle / 0lelplR
+                Use: emilys / emilyspass
             </Typography>
           </Box>
         </Paper>

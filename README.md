@@ -74,8 +74,9 @@ Client-side caching is implemented in Zustand stores (`useUserStore`, `useProduc
 
 1. Navigate to the login page at `/login`
 2. Use the test credentials:
-   - Username: `kminchelle`
-   - Password: `0lelplR`
+   - Username: `emilys`
+   - Password: `emilyspass`
+   (Or use the "Fill Test Credentials" button on the login page)
 3. After logging in, you can access the dashboard, products, and users sections.
 
 ## Project Structure

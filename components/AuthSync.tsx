@@ -13,10 +13,9 @@ export default function AuthSync() {
       const user = session.user as any;
       login(user, user.token);
     } else if (status === 'unauthenticated') {
-        // Optional: clear store if session is gone
-        // logout();
+      logout();
     }
-  }, [session, status, login]);
+  }, [session, status, login, logout]);
 
   return null;
 }
